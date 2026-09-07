@@ -182,6 +182,25 @@ def problema1168N3():
             
         print(f"{leds} leds")
 
+def problema1171():
+    seq = int(input())
+    resp = {}
+    
+    for num in range(seq):
+        num = int(input())
+        
+        if num not in resp:
+            resp[num] = 1
+        else: 
+            resp[num] += 1
+        
+    orderResp = dict(sorted(resp.items()))
+    
+    for num in orderResp:
+        quant = orderResp[num]
+        print(f"{num} aparece {quant} vez(es)")
+    
+
 def problema1847():
     entrada = input().split()
     a = int(entrada[0])
