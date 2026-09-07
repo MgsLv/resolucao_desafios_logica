@@ -100,6 +100,26 @@ def problema1052():
     else:
         print("Error")
 
+def problema1069():
+    casos = int(input())
+    
+    for caso in range(casos):
+        aberto = 0
+        diamantes = 0
+        
+        mina = str(input().strip())
+        
+        for char in mina:
+            if char == "<":
+                aberto += 1
+                
+            if char == ">" and aberto > 0:
+                aberto -= 1
+                diamantes += 1    
+    
+        print(diamantes)
+
+
 def problema1541():
     while True:
         try:
