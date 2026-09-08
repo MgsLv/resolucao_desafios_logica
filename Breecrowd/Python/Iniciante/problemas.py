@@ -119,7 +119,6 @@ def problema1069():
     
         print(diamantes)
 
-
 def problema1541():
     while True:
         try:
@@ -199,7 +198,22 @@ def problema1171():
     for num in orderResp:
         quant = orderResp[num]
         print(f"{num} aparece {quant} vez(es)")
-    
+
+def problema1548():
+    casos = int(input())
+
+    for caso in range(casos):
+        alunos = int(input())
+        listaNotas = list(map(int, input().split()))
+        listaNotasOrdenadas = sorted(listaNotas, reverse=True)
+        alunosCertos = 0
+        
+        for nota in range(alunos):
+            if listaNotas[nota] == listaNotasOrdenadas[nota]:
+                alunosCertos += 1
+            
+                
+        print(alunosCertos)
 
 def problema1847():
     entrada = input().split()
